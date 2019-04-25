@@ -1,0 +1,18 @@
+#!/bin/bash
+for arg in "$@"
+do
+    if [ "$arg" == "--help" ] || [ "$arg" == "-h" ]
+    then
+        echo "vlcorder <url> <output>"
+        echo "e.g. vlcorder http://live-mp3-128.kexp.org:80/kexp128.mp3 kexp.mp3"
+        exit 0
+    fi
+done
+
+if [ $# -ne 2 ]
+then
+    echo "incorrect args"
+    exit 1
+fi
+
+vlc $1 --sout="#duplicate{dst=std{access=file,mux=mp3,dst='$2'},dst=nodisplay}" --intf dummy --run-time 3600 --stop-time=3600 vlc://quit
