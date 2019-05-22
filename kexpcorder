@@ -3,5 +3,5 @@
 FILENAME=kexp-`date "+%Y-%m-%d_%H%M"`.mp3
 $HOME/bin/vlcorder http://live-mp3-128.kexp.org:80/kexp128.mp3 $HOME/tmp/$FILENAME
 
-mv $HOME/tmp/$FILENAME $HOME/GDrive/Music/KEXP
+mv $HOME/tmp/$FILENAME $HOME/GDrive/KEXP
 
