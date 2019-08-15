@@ -15,7 +15,7 @@ FILENAME=$SHOW-$YEAR-$DATETIME.aac
 # record the stream via vlc
 $HOME/bin/vlcorder http://live-aacplus-64.kexp.org/kexp64.aac $HOME/tmp/$FILENAME
 # update id3 metadata
-id3 -a "KEXP $SHOW" -l "$SHOW $YEAR" -t "$SHOW $DATETIME" -g "Acid" $HOME/tmp/$FILENAME
+id3 -a "KEXP $SHOW" -l "$SHOW $YEAR" -t "$SHOW $DATETIME" -g "Acid" -y "$YEAR" $HOME/tmp/$FILENAME
 
 mv $HOME/tmp/$FILENAME $HOME/GDrive/KEXP
 
