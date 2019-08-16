@@ -15,4 +15,4 @@ then
     exit 1
 fi
 
-vlc $1 --sout="#duplicate{dst=std{mux=ts,access=file,dst='$2'},dst=nodisplay}" --intf dummy --run-time 3600 --stop-time=3600 vlc://quit
+streamripper $1 -l 3600 -a $2 -u 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0' -m 300 -d $HOME/tmp -s
